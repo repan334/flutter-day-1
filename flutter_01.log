@@ -1,0 +1,80 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+FileSystemException: FileSystemException: Exists failed, path = 'D:\flutter day1\flutter_application_day1\flutter_application_\assets\image\' (OS Error: The directory name is invalid.
+, errno = 267)
+
+```
+#0      _Directory.existsSync (dart:io/directory_impl.dart:107:7)
+#1      ForwardingFileSystemEntity.existsSync (package:file/src/forwarding/forwarding_file_system_entity.dart:43:33)
+#2      ErrorHandlingDirectory.existsSync.<anonymous closure> (package:flutter_tools/src/base/error_handling_io.dart:458:22)
+#3      _runSync (package:flutter_tools/src/base/error_handling_io.dart:549:14)
+#4      ErrorHandlingDirectory.existsSync (package:flutter_tools/src/base/error_handling_io.dart:457:12)
+#5      ManifestAssetBundle._parseAssetsFromFolder (package:flutter_tools/src/asset.dart:1015:47)
+#6      ManifestAssetBundle._parseAssets (package:flutter_tools/src/asset.dart:906:9)
+#7      ManifestAssetBundle.build (package:flutter_tools/src/asset.dart:297:54)
+<asynchronous suspension>
+#8      ResidentWebRunner._updateDevFS (package:flutter_tools/src/isolated/resident_web_runner.dart:711:26)
+<asynchronous suspension>
+#9      ResidentWebRunner.run.<anonymous closure> (package:flutter_tools/src/isolated/resident_web_runner.dart:337:41)
+<asynchronous suspension>
+#10     asyncGuard.<anonymous closure> (package:flutter_tools/src/base/async_guard.dart:109:26)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel stable, 3.32.7, on Microsoft Windows [Version 10.0.26100.6725], locale en-ID) [359ms]
+    [32m•[39m Flutter version 3.32.7 on channel stable at C:\flutter
+    [32m•[39m Upstream repository https://github.com/flutter/flutter.git
+    [32m•[39m Framework revision d7b523b356 (3 months ago), 2025-07-15 17:03:46 -0700
+    [32m•[39m Engine revision 39d6d6e699
+    [32m•[39m Dart version 3.8.1
+    [32m•[39m DevTools version 2.45.1
+
+[32m[✓][39m Windows Version (11 Home Single Language 64-bit, 24H2, 2009) [1,147ms]
+
+[32m[✓][39m Android toolchain - develop for Android devices (Android SDK version 33.0.0) [2.2s]
+    [32m•[39m Android SDK at C:\Android
+    [32m•[39m Platform android-33, build-tools 33.0.0
+    [32m•[39m ANDROID_HOME = C:\Android\cmdline-tools\latest
+    [32m•[39m ANDROID_SDK_ROOT = C:\Android\cmdline-tools\latest
+    [32m•[39m Java binary at: C:\Program Files\Java\jdk-24\bin\java
+      This JDK is specified by the JAVA_HOME environment variable.
+      To manually set the JDK path, use: `flutter config --jdk-dir="path/to/jdk"`.
+    [32m•[39m Java version Java(TM) SE Runtime Environment (build 24.0.2+12-54)
+    [32m•[39m All Android licenses accepted.
+
+[32m[✓][39m Chrome - develop for the web [8ms]
+    [32m•[39m Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[31m[✗][39m Visual Studio - develop Windows apps [7ms]
+    [31m✗[39m Visual Studio not installed; this is necessary to develop Windows apps.
+      Download at https://visualstudio.microsoft.com/downloads/.
+      Please install the "Desktop development with C++" workload, including all of its default components
+
+[33m[!][39m Android Studio (not installed) [4ms]
+    [32m•[39m Android Studio not found; download from https://developer.android.com/studio/index.html
+      (or visit https://flutter.dev/to/windows-android-setup for detailed instructions).
+
+[32m[✓][39m VS Code (version 1.104.2) [4ms]
+    [32m•[39m VS Code at C:\Users\Personal\AppData\Local\Programs\Microsoft VS Code
+    [32m•[39m Flutter extension version 3.120.0
+
+[32m[✓][39m Connected device (3 available) [119ms]
+    [32m•[39m Windows (desktop) • windows • windows-x64    • Microsoft Windows [Version 10.0.26100.6725]
+    [32m•[39m Chrome (web)      • chrome  • web-javascript • Google Chrome 140.0.7339.208
+    [32m•[39m Edge (web)        • edge    • web-javascript • Microsoft Edge 141.0.3537.57
+
+[32m[✓][39m Network resources [1,474ms]
+    [32m•[39m All expected network resources are available.
+
+[33m![39m Doctor found issues in 2 categories.
+```
